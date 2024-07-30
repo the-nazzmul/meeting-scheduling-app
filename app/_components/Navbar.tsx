@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,7 +10,7 @@ const Navbar = () => {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <nav className="p-4 shadow-md bg-gradient-to-b from-gray-300 to-white border-b-2 border-gray-700">
+    <nav className="p-4 shadow-md bg-gradient-to-b from-gray-300 to-white">
       <div className="container mx-auto flex justify-between items-center">
         <div className="w-1/2 lg:w-fit">
           <Image
@@ -55,8 +56,12 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="hidden lg:flex gap-x-2">
-          <Button variant="outline">Login</Button>
-          <Button variant="default">Get Started</Button>
+          <LoginLink>
+            <Button variant="outline">Login</Button>
+          </LoginLink>
+          <RegisterLink>
+            <Button variant="default">Get Started</Button>
+          </RegisterLink>
         </div>
       </div>
     </nav>
