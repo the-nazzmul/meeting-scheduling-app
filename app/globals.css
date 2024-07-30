@@ -68,6 +68,15 @@
   }
 }
 
-hober{
-color: #0ec8af;
+.dotted {
+  background-image: radial-gradient(
+    circle at 30% 30%,
+    #adadad 3%,
+    transparent 3%
+  );
+  background-size: 40px 40px;
+}
+
+.custom-height {
+  min-height: calc(100vh - 192px);
 }

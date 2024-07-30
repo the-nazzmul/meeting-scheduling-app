@@ -41,8 +41,8 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#0BA792",
-          foreground: "#000000",
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
