@@ -24,7 +24,9 @@ export default function DashboardLayout({
             <div className="hidden lg:block lg:col-span-2 h-screen bg-gradient-to-r from-gray-300 to-white shadow-lg p-4">
               <Sidebar />
             </div>
-            <div className="col-span-12 lg:col-span-10 dotted p-12 h-screen">{children}</div>
+            <div className="col-span-12 lg:col-span-10 dotted p-12 h-screen">
+              {children}
+            </div>
           </div>
         </main>
       </body>

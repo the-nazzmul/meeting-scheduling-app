@@ -1,8 +1,20 @@
+"use client";
 import SocialLogins from "@/components/SocialLogins";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const { user } = useKindeBrowserClient();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (user) {
+      setLoading(false);
+    }
+  }, [user]);
+
   return (
     <div className="dotted p-8 ">
       <div className="flex flex-col gap-4 items-center justify-center custom-height">
