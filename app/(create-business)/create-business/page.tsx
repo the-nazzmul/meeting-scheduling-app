@@ -8,12 +8,10 @@ import { doc, getFirestore, setDoc } from "firebase/firestore";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
 const CreateBusiness = () => {
   const [businessName, setBusinessName] = useState("");
-  const [userId, setUserId] = useState("");
 
   const db = getFirestore(app);
   const router = useRouter();
@@ -25,10 +23,10 @@ const CreateBusiness = () => {
       await setDoc(docRef, {
         businessName: businessName,
         email: user.email,
-        userName: userId,
+        userName: user.family_name,
       }).then((res) => {
         toast("New Business Created");
-        router.replace("/dashboard");
+        router.replace("/dashboard/meeting-type");
       });
     }
   };
@@ -50,9 +48,12 @@ const CreateBusiness = () => {
         </p>
         <div className="w-full">
           <label className="text-slate-600 mt-2">Team Name</label>
-          <Input type="text" placeholder="Your team name" className="mt-2" />
-          <label className="text-slate-600 mt-2">Team Name</label>
-          <Input type="text" placeholder="User id" className="mt-2" />
+          <Input
+            type="text"
+            placeholder="Your team name"
+            className="mt-2"
+            onChange={(e) => setBusinessName(e.target.value)}
+          />
         </div>
         <Button
           className="w-full text-lg"
