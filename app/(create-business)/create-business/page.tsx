@@ -23,7 +23,7 @@ const CreateBusiness = () => {
       await setDoc(docRef, {
         businessName: businessName,
         email: user.email,
-        userName: user.family_name,
+        userName: user.given_name,
       }).then((res) => {
         toast("New Business Created");
         router.replace("/dashboard/meeting-type");

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { Briefcase, Calendar, Clock, Plus, Settings } from "lucide-react";
+import { Briefcase, Calendar, Clock, Home, Plus, Settings } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -32,6 +32,12 @@ const Sidebar = () => {
       path: "/dashboard/settings",
       icon: Settings,
     },
+    {
+      id: 5,
+      name: "Home",
+      path: "/",
+      icon: Home,
+    },
   ];
 
   const path = usePathname();
@@ -57,10 +63,15 @@ const Sidebar = () => {
         {menu.map((item, index) => (
           <Button
             key={item.id}
-            className={`w-full  ${item.path === path && "bg-accent border border-primary"}`}
+            className={`w-full  ${
+              item.path === path && "bg-accent border border-primary"
+            }`}
             variant="ghost"
           >
-            <Link href={item.path} className={`w-full flex gap-2 text-lg items-center`}>
+            <Link
+              href={item.path}
+              className={`w-full flex gap-2 text-lg items-center`}
+            >
               <item.icon /> {item.name}
             </Link>
           </Button>

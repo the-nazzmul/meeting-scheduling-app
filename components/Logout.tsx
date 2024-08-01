@@ -3,11 +3,15 @@
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs";
 import { Button } from "./ui/button";
 
-const Logout = () => {
+interface ILogoutProps {
+  full?: boolean;
+}
+
+const Logout = ({ full }: ILogoutProps) => {
   return (
-    <LogoutLink>
-      <Button>Logout</Button>
-    </LogoutLink>
+    <Button className={`${full && "w-full"}`}>
+      <LogoutLink>Logout</LogoutLink>
+    </Button>
   );
 };
 
