@@ -22,42 +22,42 @@ const Navbar = () => {
             className="rounded-xl"
           />
         </div>
-        <div className="hidden lg:block">
-          <ul className="flex gap-4">
-            <li>
-              <Link
-                href="/"
-                className={`font-semibold hover:border-b-2 hover:border-b-gray-500 hover:text-gray-500 p-2  ${
-                  pathname === "/" && "border-b-2 border-black"
-                }`}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className={`font-semibold hover:border-b-2 hover:border-b-gray-500 hover:text-gray-500 p-2 ${
-                  pathname === "/about" && "border-b-2 border-black"
-                }`}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className={`font-semibold hover:border-b-2 hover:border-b-gray-500 hover:text-gray-500 p-2 ${
-                  pathname === "/contact" && "border-b-2 border-black"
-                }`}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
 
-        <div>
+        <div className="flex gap-2 items-center">
+          <div className="hidden lg:block">
+            <ul className="flex gap-4">
+              <li>
+                <Link
+                  href="/"
+                  className={`font-semibold hover:border-b-2 hover:border-b-gray-500 hover:text-gray-500 p-2  ${
+                    pathname === "/" && "border-b-2 border-black"
+                  }`}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className={`font-semibold hover:border-b-2 hover:border-b-gray-500 hover:text-gray-500 p-2 ${
+                    pathname === "/about" && "border-b-2 border-black"
+                  }`}
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className={`font-semibold hover:border-b-2 hover:border-b-gray-500 hover:text-gray-500 p-2 ${
+                    pathname === "/contact" && "border-b-2 border-black"
+                  }`}
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
           <NavRight />
         </div>
       </div>
