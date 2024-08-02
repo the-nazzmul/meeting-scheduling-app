@@ -9,9 +9,9 @@ import NavRight from "./NavRight";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const { user, isLoading } = useKindeBrowserClient();
+
   return (
-    <nav className="p-4 shadow-md backdrop-blur">
+    <nav className="p-4 shadow-md backdrop-blur max-h-[107.625px]">
       <div className="container mx-auto flex justify-between items-center">
         <div className="w-1/2 lg:w-fit">
           <Image
