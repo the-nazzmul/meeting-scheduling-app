@@ -31,7 +31,6 @@ const UserDropdown = ({ inDashboard }: IUserDropdownProps) => {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuSeparator />
         <DropdownMenuItem>
           <Link href="/user-profile" className="flex gap-2 items-center">
             <User />

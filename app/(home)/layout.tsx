@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={outfit.className}>
         <main>
-          <header>
+          <header className="fixed w-full">
             <Navbar />
           </header>
           <Toaster />

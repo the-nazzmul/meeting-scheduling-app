@@ -1,16 +1,11 @@
-"use client";
-import SocialLogins from "@/components/SocialLogins";
-import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import Image from "next/image";
+import SocialLogins from "../SocialLogins";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
-const Hero = () => {
-  const { user } = useKindeBrowserClient();
-
+const HeroWithoutUser = () => {
   return (
     <div className="dotted p-8 ">
-      <div className="flex flex-col gap-4 items-center justify-center custom-height">
+      <div className="flex flex-col gap-4 items-center justify-center h-screen">
         <div>
           <Image
             src="/nazzly-logo-for-white.png"
@@ -23,7 +18,7 @@ const Hero = () => {
           Easy Scheduling ahead
         </h1>
         <h4 className="text-xl  lg:max-w-4xl mx-auto text-center mt-4 mb-8">
-          Scheduly is your scheduling automation platform for eliminating the
+          Nazzly is your scheduling automation platform for eliminating the
           back-end-forth emails to find the perfect time......and so much more
         </h4>
 
@@ -45,4 +40,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroWithoutUser;

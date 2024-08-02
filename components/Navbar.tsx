@@ -15,7 +15,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const { user } = useKindeBrowserClient();
   return (
-    <nav className="p-4 shadow-md bg-gradient-to-b from-gray-300 to-white">
+    <nav className="p-4 shadow-md backdrop-blur">
       <div className="container mx-auto flex justify-between items-center">
         <div className="w-1/2 lg:w-fit">
           <Image
