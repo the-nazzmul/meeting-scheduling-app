@@ -7,13 +7,6 @@ import { useEffect, useState } from "react";
 
 const Hero = () => {
   const { user } = useKindeBrowserClient();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (user) {
-      setLoading(false);
-    }
-  }, [user]);
 
   return (
     <div className="dotted p-8 ">

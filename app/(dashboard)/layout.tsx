@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./../globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Sidebar from "@/components/dashboard/SideBar";
+import DashboardHeader from "@/components/dashboard/DashboardHeader";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -24,8 +25,11 @@ export default function DashboardLayout({
             <div className="hidden lg:block lg:col-span-2 h-screen bg-gradient-to-r from-gray-300 to-white shadow-lg p-4">
               <Sidebar />
             </div>
-            <div className="col-span-12 lg:col-span-10 dotted p-12 h-screen">
-              {children}
+            <div className="col-span-12 lg:col-span-10 dotted h-screen">
+                <DashboardHeader />
+              <div className="p-4">
+                {children}
+              </div>
             </div>
           </div>
         </main>

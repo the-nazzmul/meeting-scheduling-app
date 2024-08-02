@@ -52,10 +52,7 @@ const Sidebar = () => {
         className="mx-auto"
       />
       <div className="mt-4">
-        <Button
-          className="w-full flex gap-2 text-lg rounded-full"
-          variant="destructive"
-        >
+        <Button className="w-full flex gap-2 text-lg rounded-full">
           <Plus /> Create
         </Button>
       </div>

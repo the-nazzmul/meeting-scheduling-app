@@ -7,12 +7,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
-import { ChevronDown, LayoutDashboardIcon, User } from "lucide-react";
+import { LayoutDashboardIcon, User } from "lucide-react";
 import Image from "next/image";
 import Logout from "./Logout";
 import Link from "next/link";
 
-const UserDropdown = () => {
+interface IUserDropdownProps {
+  inDashboard?: boolean;
+}
+const UserDropdown = ({ inDashboard }: IUserDropdownProps) => {
   const { user } = useKindeBrowserClient();
   return (
     <DropdownMenu>
@@ -25,7 +28,6 @@ const UserDropdown = () => {
             alt="user image"
             className="rounded-full border border-primary"
           />
-          <ChevronDown size={24} />
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
@@ -36,15 +38,19 @@ const UserDropdown = () => {
             <p>Profile</p>
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Link
-            href="/dashboard/meeting-type"
-            className="flex gap-2 items-center"
-          >
-            <LayoutDashboardIcon />
-            <p>Dashboard</p>
-          </Link>
-        </DropdownMenuItem>
+        {inDashboard ? (
+          <></>
+        ) : (
+          <DropdownMenuItem>
+            <Link
+              href="/dashboard/meeting-type"
+              className="flex gap-2 items-center"
+            >
+              <LayoutDashboardIcon />
+              <p>Dashboard</p>
+            </Link>
+          </DropdownMenuItem>
+        )}
         <DropdownMenuItem className="flex gap-2 items-center">
           <Logout full />
         </DropdownMenuItem>
