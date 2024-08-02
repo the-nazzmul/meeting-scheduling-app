@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
-        <main>
+        <main className="min-h-screen">
           <header className="fixed w-full">
             <Navbar />
           </header>
