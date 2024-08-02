@@ -26,10 +26,8 @@ export default function DashboardLayout({
               <Sidebar />
             </div>
             <div className="col-span-12 lg:col-span-10 dotted h-screen">
-                <DashboardHeader />
-              <div className="p-4">
-                {children}
-              </div>
+              <DashboardHeader />
+              <div className="p-4">{children}</div>
             </div>
           </div>
         </main>

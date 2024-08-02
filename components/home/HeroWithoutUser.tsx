@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const HeroWithoutUser = () => {
   return (
-    <div className="flex flex-col gap-4 items-center justify-center dotted p-8 pt-[500px] lg:pt-16 h-screen">
+    <div className="flex flex-col gap-4 items-center justify-center dotted p-8 pt-24 lg:pt-16 min-h-screen">
       <div>
         <Image
           src="/nazzly-logo-for-white.png"

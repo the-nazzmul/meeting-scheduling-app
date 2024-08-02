@@ -1,12 +1,10 @@
 import Image from "next/image";
-import SocialLogins from "../SocialLogins";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { Rocket } from "lucide-react";
 
 const HeroWithUser = () => {
   return (
-    <div className="flex flex-col gap-4 items-center justify-center dotted p-8 pt-96 lg:pt-16 h-screen">
+    <div className="flex flex-col gap-4 items-center justify-center dotted p-8 pt-24 lg:pt-16 min-h-screen">
       <div>
         <Image
           src="/nazzly-logo-for-white.png"

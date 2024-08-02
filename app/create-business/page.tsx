@@ -32,7 +32,7 @@ const CreateBusiness = () => {
   };
 
   return (
-    <div className="p-12 flex flex-col items-center gap-20 dotted h-screen">
+    <main className="p-12 flex flex-col items-center gap-20 dotted h-screen">
       <Image
         src="/nazzly-logo-for-white.png"
         height={300}
@@ -63,7 +63,7 @@ const CreateBusiness = () => {
           Create Business
         </Button>
       </div>
-    </div>
+    </main>
   );
 };
 

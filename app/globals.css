@@ -75,6 +75,7 @@
     transparent 3%
   );
   background-size: 40px 40px;
+  background-repeat: repeat;
 }
 
 .custom-height {
